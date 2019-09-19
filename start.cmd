@@ -1,0 +1,2 @@
+python gloss.py
+pause

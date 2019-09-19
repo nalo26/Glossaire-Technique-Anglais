@@ -1,0 +1,51 @@
+﻿insulation;isolation;False
+integer;nombre entier;False
+to intend;avoir l'intention de;False
+interactive;interactif;False
+interface;interface;False
+internet access package;kit d'accès à internet;False
+interrupt;interruption;False
+inverter;inverseur;False
+to involve;impliquer/ inclure;True
+ISP (Internet service provider);un fournisseur d'accès;True
+item;article, produit/ élément;True
+jack;jack, fiche, prise (cric, vérin);False
+to join;joindre, unir;False
+joystick;manche à balai, manette de commande;False
+to jump;relier par un cavalier;False
+jump;saut;True
+jumper;cavalier;False
+kernel;noyau;True
+to key in;entrer (données);True
+key;touche, bouton/ code, clé;True
+keyboard;clavier;True
+keyword;mot clé;False
+to label;étiqueter;True
+label;étiquette;True
+to lag;être à la traîne, traîner;False
+laptop;ordinateur portable;True
+latch;bascule logique,verrou, loquet;False
+to lay;poser;True
+lay-out;disposition, agencement;True
+layer;couche;True
+lead;fil (élec.);True
+to lead somebody to do something;conduire (à), provoquer;True
+leakage current;courant de fuite;False
+to lengthen;allonger;False
+level;niveau, seuil;True
+lever;levier;False
+to lift;soulever;True
+light (nom);lumière/ voyant;True
+to link;relier;True
+to load;charger;True
+Local Area Network (LAN);réseau local;True
+local mode;mode local;False
+to locate;situer;True
+location;emplacement;True
+to lock;verrouiller;True
+logic;logique;False
+to log in/on;se brancher/connecter, ouvrir une session;True
+to log out;se déconnecter;False
+to loosen;desserrer;False
+loss;perte;True
+loud speaker;haut-parleur;False

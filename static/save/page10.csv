@@ -1,0 +1,51 @@
+﻿to push;pousser;False
+quotation;un devis / une citation;False
+to quote;établir un prix, faire un devis / citer;False
+to raise;soulever / élever à une puissance;True
+random;aléatoire, au hasard;True
+to range from... to...;aller, s'étendre de... à...;True
+range;portée, rayon d'action / gamme, éventail;True
+rate;taux / débit / tarif;True
+ratings;valeur;False
+ratio;rapport, proportion;True
+to reach;atteindre;True
+read-only memory/storage;mémoire de stockage;True
+real time;temps réel;True
+receiver;récepteur;False
+receiving end;côté récepteur;False
+recipient;destinataire, bénéficiaire;False
+recognition;reconnaissance;False
+to recognize;reconnaître;False
+record;enregistrement;False
+to record;enregistrer;False
+to recover;récupérer;True
+(data) recovery;la récupération de données;False
+rectifier;redresseur;False
+recurrent;périodique;True
+refresh;rafraîchissement;False
+to register;se faire inscrire sur une liste, s'inscrire;True
+registration;enregistrement, inscription;True
+to release;relâcher, libérer;True
+release;une version, une révision;True
+relevant;pertinent, approprié, utile;True
+reliability;fiabilité;True
+reliable;fiable;True
+to remain;rester, demeurer;True
+remote;à distance;True
+remote control;télécommande;True
+remote maintenance;télémaintenance;False
+to remove;retirer, enlever;True
+to repair;réparer;False
+repeater;répéteur;False
+to replace;remplacer;False
+request;demande;True
+to require;nécessiter, demander;True
+requirement;besoin, exigence;True
+reservation;réservation;False
+to reset;mettre à zéro;True
+resistor;résistance;False
+to resume;reprendre (attention faux ami!);False
+response time;temps de réponse;False
+to restore;remettre à l'état initial (info.);True
+to result from;provenir de;True
+to result in;provoquer;True

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Glossaire d'anglais</title>
+		<link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" media="screen" type="text/css" />
+	</head>
+	<body>	
+		<div id="header">
+			<br/><h1>Glossaire technique d'anglais</h1>
+			<h2>Simulation de contrôle sur la page {{ page }} ({{ nbmot }} mots)</h2>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="/accueil/1"><div class="onglet">Accueil</div></a></li>
+				<li><a href="/test"><div class="onglet">Se tester</div></a></li>
+				<li><a href="/recherche"><div class="onglet">Rechercher</div></a></li>
+			</ul>
+		</div>
+		<div id="content">
+			<center>
+				<form id="Control" method="POST" action="/results" autocomplete="off">
+					<div class="header">
+						<b>Testez vos connaissances en remplissant les champs ci-dessous</b>
+					</div>
+					<div class="content">
+						<br>
+						<table class="result" width="100%">
+							{% for i in range(words|length) %}
+							<tr>
+								<td width="50%" align="right">{{ words[i] }}</td>
+								<td width="50%" align="left"><input name="{{i}}"/></td>
+							</tr>
+							{%endfor%}
+						</table>
+						<br>
+						<input align="center" type="submit" value="     Valider     ">
+						<br><br>
+					</div>
+				</form>
+			</center>
+		</div>
+	</body>
+</html>

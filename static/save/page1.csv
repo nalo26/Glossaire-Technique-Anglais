@@ -1,0 +1,51 @@
+﻿abort;arrêter, abandonner;True
+to access something;accéder à qqch;True
+according to;selon, en fonction de;True
+accuracy;exactitude;True
+accurate;exact, précis;True
+to achieve;atteindre, réussir, réaliser;True
+to acknowledge;reconnaître;True
+acknowledge/negative acknowledge (ACK/NAK);accusé de réception positif/négatif;False
+to act as;fonctionner comme, jouer le rôle de;False
+actual;réel;True
+to actuate;faire marcher, commander;False
+actuator;mécanisme de commande;False
+adaptative routing;acheminement adaptatif;False
+add-on;une extension;True
+to add;ajouter;False
+addressing;adressage;False
+to adjust;règler, mettre au point;False
+to aim at;viser, avoir pour but;True
+aim;but, objectif;True
+aliasing;effet de dentelure, crénelage;False
+to allow somebody to do something;permettre, autoriser;True
+alternating current;courant alternatif;False
+amount;quantité / montant;True
+amp;ampère;False
+to analyse;analyser;False
+analysis;analyse;False
+to append;ajouter, apposer;False
+applet;une application miniature;False
+appliance;appareil;True
+to apply power;mettre sous tension;True
+to apply;appliquer, mettre en application;True
+architecture;architecture;False
+array;un ensemble;False
+area;zone, endroit;True
+as result of;la suite de (conséquence);False
+to assess;estimer, évaluer;True
+to assign;affecter, assigner;True
+asynchronous;asynchrone;False
+attachment / attached file;une fichier attaché;True
+available;disponible;True
+average;moyenne (nom), moyen (adj.);True
+to avoid doing something;éviter;True
+backbone;colonne vertébrale, réseau principal;False
+to back up;faire une sauvegarde de sécurité;True
+bandwidth;bande passante, largeur de bande;True
+batch;série d'opérations, un lot;True
+battery;pile, batterie;False
+benchmark;test de performance;True
+bias;polarisation;True
+binary character;caractère binaire;False
+binary digit;symbole/chiffre binaire;True

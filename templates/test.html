@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Glossaire d'anglais</title>
+		<link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" media="screen" type="text/css" />
+		<script type="text/javascript">
+			function radioChange(){			
+				var check = document.getElementById('radio-0').checked;			
+				if (check == true){
+					document.getElementById("nbpage").style.display = 'block';
+					document.getElementById("nbmot").style.display = 'none';
+				} else {
+					document.getElementById("nbpage").style.display = 'none';
+					document.getElementById("nbmot").style.display = 'block';
+				}
+			}
+		</script>		
+	</head>
+	<body>		
+		<div id="header">
+			<br/><h1>Glossaire technique d'anglais</h1>			
+			<h2>Choix du test</h2>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="/accueil/1"><div class="onglet">Accueil</div></a></li>
+				<li><a href="/test"><div class="onglet">Se tester</div></a></li>
+				<li><a href="/recherche"><div class="onglet">Rechercher</div></a></li>
+			</ul>
+		</div>
+		<div id="container">
+			<div id="content">
+				<center>
+					<form method="POST" action="" class="form-horizontal">
+						<div class="header">
+							<b>Sélectionnez la partie sur laquelle vous souhaitez être interrogé :</b>
+						</div>
+						<div class="content">
+							{{ form.hidden_tag() }}
+							<div>
+								<br>
+								{% for subfield in form.radio %}
+									<td>{{ subfield(onChange="radioChange()") }}</td>
+									<td>{{ subfield.label }}</td>
+									<br>
+								{% endfor %}
+								<br>
+								<td>{{ form.important }}</td>
+								<td>{{ form.important.label }}</td>
+								<div id="nbpage">
+									<br>
+									{{ form.select.label }}
+									{{ form.select }}
+								</div>
+								<div id="nbmot" style="display: none">
+									<br>
+									{{ form.nbmot.label }}
+									{{ form.nbmot(size="1") }}
+								</div>
+							</div>
+							<div>
+								<br/>
+								{{ form.submit }}
+								<br/><br/>
+							</div>
+						</div>
+					</form>
+				</center>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>Glossaire d'anglais</title>
+      <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" media="screen" type="text/css" />
+      <script type="text/javascript">
+         function play(link){
+            var x = new Audio(link);
+            x.play();
+         }
+      </script>
+   </head>
+   <body>   
+      <div id="header">
+         <br/><h1>Glossaire technique d'anglais</h1>         
+         <h2>Cliquez sur un mot pour écouter sa prononciation</h2>
+      </div>
+      <div id="menu">
+         <ul>
+            <li><a href="/accueil/1"><div class="onglet">Accueil</div></a></li>
+            <li><a href="/test"><div class="onglet">Se tester</div></a></li>
+            <li><a href="/recherche"><div class="onglet">Rechercher</div></a></li>
+         </ul>
+      </div>
+      <div id="content">
+         <table class="ar">
+            <tr>
+               <th align="left"><a href="/accueil/{{previouspage}}">
+                     <div class="ImagePrec">
+                        <img src="{{url_for('static', filename='images/precedant.png')}}" width="40px">
+                        <img src="{{url_for('static', filename='images/precedant_hover.png')}}" width="40px" class="top">
+                     </div></a></th>
+               <th align="center">{{page}} / 14</p></th>
+               <th align="right"><a href="/accueil/{{nextpage}}">
+                     <div class="ImagePrec">
+                        <img src="{{url_for('static', filename='images/suivant.png')}}" width="40px">
+                        <img src="{{url_for('static', filename='images/suivant_hover.png')}}" width="40px" class="top">
+                     </div></a></th>
+            </tr>
+         </table>
+         <table class="gl">
+            <thead>
+               <col width="50%">
+               <col width="50%">
+               <tr>
+                  <th>Anglais</th>
+                  <th>Français</th>
+               </tr>
+            </thead>
+            <tbody>
+               {% for i in range(lenght) %}
+                  {% if i is divisibleby(2) %}
+                     <tr class="pair">
+                        {% if "True" in listed[lenght*2+i] %}
+                           <td style="color:#ff5050;"><span onClick='play("https://www.google.com/speech-api/v1/synthesize?text={{listed[i]}}&enc=mpeg&lang=en-gb&speed=0.4&client=lr-language-tts&use_google_only_voices=1")'><b>{{ listed[i] }}</b></span></td>
+                           <td style="color:#ff5050;"><span onClick='play("https://www.google.com/speech-api/v1/synthesize?text={{listed[lenght+i]}}&enc=mpeg&lang=fr-fr&speed=0.5&client=lr-language-tts&use_google_only_voices=1")'><b>{{ listed[lenght+i] }}</b></span></td>
+                        {% else %}
+                           <td><span onClick='play("https://www.google.com/speech-api/v1/synthesize?text={{listed[i]}}&enc=mpeg&lang=en-gb&speed=0.4&client=lr-language-tts&use_google_only_voices=1")'>{{ listed[i] }}</span></td>
+                           <td><span onClick='play("https://www.google.com/speech-api/v1/synthesize?text={{listed[lenght+i]}}&enc=mpeg&lang=fr-fr&speed=0.5&client=lr-language-tts&use_google_only_voices=1")'>{{ listed[lenght+i] }}</span></td>
+                        {% endif %}
+                     </tr>
+                  {% else %}
+                     <tr class="impair">
+                        {% if "True" in listed[lenght*2+i] %}
+                           <td style="color:#ff5050;"><span onClick='play("https://www.google.com/speech-api/v1/synthesize?text={{listed[i]}}&enc=mpeg&lang=en-gb&speed=0.4&client=lr-language-tts&use_google_only_voices=1")'><b>{{ listed[i] }}</b></span></td>
+                           <td style="color:#ff5050;"><span onClick='play("https://www.google.com/speech-api/v1/synthesize?text={{listed[lenght+i]}}&enc=mpeg&lang=fr-fr&speed=0.5&client=lr-language-tts&use_google_only_voices=1")'><b>{{ listed[lenght+i] }}</b></span></td>
+                        {% else %}
+                           <td><span onClick='play("https://www.google.com/speech-api/v1/synthesize?text={{listed[i]}}&enc=mpeg&lang=en-gb&speed=0.4&client=lr-language-tts&use_google_only_voices=1")'>{{ listed[i] }}</span></td>
+                           <td><span onClick='play("https://www.google.com/speech-api/v1/synthesize?text={{listed[lenght+i]}}&enc=mpeg&lang=fr-fr&speed=0.5&client=lr-language-tts&use_google_only_voices=1")'>{{ listed[lenght+i] }}</span></td>
+                        {% endif %}
+                     </tr>
+                  {% endif %}
+               {% endfor %}
+               <tr>
+                  <td style="border-color:#999;border-left-width:0px;border-right-width:0px;border-top-width:1px;border-bottom-width:0px;"></td>
+                  <td style="border-color:#999;border-left-width:0px;border-right-width:0px;border-top-width:1px;border-bottom-width:0px;"></td>
+               </tr>
+            </tbody>
+         </table>
+         <br>
+         <table class="ar">
+            <tr>
+               <th align="left"><a href="/accueil/{{previouspage}}">
+                     <div class="ImagePrec">
+                        <img src="{{url_for('static', filename='images/precedant.png')}}" width="40px">
+                        <img src="{{url_for('static', filename='images/precedant_hover.png')}}" width="40px" class="top">
+                     </div></a></th>
+               <th align="center">{{page}} / 14</p></th>
+               <th align="right"><a href="/accueil/{{nextpage}}">
+                     <div class="ImagePrec">
+                        <img src="{{url_for('static', filename='images/suivant.png')}}" width="40px">
+                        <img src="{{url_for('static', filename='images/suivant_hover.png')}}" width="40px" class="top">
+                     </div></a></th>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,327 @@
+/* --------------------------------
+  * FEUILLE DE STYLE
+  * Projet glossaire technique d'anglais
+  * ------------------------------------------ */
+
+body{
+margin:0;
+background-color: #181A1B;
+font-family: "Agency FB";
+font-size: 20px;
+}
+
+
+/* -------------
+ * Header
+ */
+
+@font-face {
+    font-family: "Manteka";
+    src: url("Manteka.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+#header{
+background: #111111;
+padding-left: none;
+text-align:center;
+margin:0;
+height: 140px;
+width:100%
+}
+
+#header h1{
+font-family: "Manteka";
+font-size:2em;
+margin:0;
+color:white;
+}
+
+#header h2{
+text-align:center;
+color:white;
+}
+/* 
+ * /Header
+ ------------- */
+ 
+#content{
+margin-top:8%;
+margin-left:5%;
+text-align:center;
+width:90%;
+}
+
+/* ---------------
+ * Les formulaires
+ */
+form .header{
+	padding: 15px;
+	color: black;
+	background-color:#fff;
+}
+
+form .content{
+	border:1px solid white;
+	text-align: center;
+	color:white;
+	background-color: #111;
+}
+
+#Connection{
+width:40%;
+margin-top:15%;
+}
+
+#Deconnection{
+margin-left:70%;
+}
+
+#test{
+width:60%;
+}
+
+#export{
+width:60%;
+}
+
+#rech{
+width:60%;
+}
+
+#ChangerMdp{
+width:50%;
+}
+
+.importation{
+width:40%;
+}
+
+.ajout{
+width:40%;
+}
+.ajout .content{
+text-align: right;
+padding-right:20%;
+}
+/* 
+ * Les formulaires
+ --------------- */
+
+/*.header{
+background-color:#fff;
+padding: 15px;
+}*/
+
+.message_import{
+margin-left: 35%;
+margin-right: 35%;
+background-color:#FFCC66;
+color: green;
+}
+
+/*************************
+ * Switch
+ */
+.switch {
+	margin-left: 5%;
+	color: #fff;
+	position: relative;
+	display: inline-block;
+	width: 30px;
+	height: 17px;
+}
+.switch input{
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 13px;
+	width: 13px;
+	left: 2px;
+	bottom: 0px;
+	background-color: white;
+	-webkit-transition: .4s;
+	
+}
+input:checked + .slider {
+	background-color: #2196F3;
+}
+input:checked + .slider:before {
+	-webkit-transform: translateX(13px);
+	-ms-transform: translateX(13px);
+	transform: translateX(13px);
+}
+.slider.round {
+	border-radius: 34px;
+}
+.slider.round:before {
+	border-radius: 50%;
+}
+
+/*************************
+ * Tableau
+ */
+.ar {
+	width: 100%;
+	color: #fff;
+}
+
+.gl {
+	width: 100%;
+	color: #fff;
+	border-collapse: collapse;
+}
+
+.gl th {
+	/* titles */
+	font-size: 30px;
+	background: #111;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #999;
+	word-break: normal;
+	padding: 15px;
+}
+
+.gl td {
+	/* others */
+	text-align: left;
+	border-style: solid;
+	border-color: #999;
+	padding: 10px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+}
+
+.pair {
+	background: #262626;
+}
+.impair {
+	background: #181818;
+}
+
+.result {
+	width: 100%
+	/*color: #fff;*/
+}
+.result td{
+	padding: 3px;
+}
+/*************************
+ * Menu
+ */
+#menu ul{				
+padding:0;
+list-style : none; 
+}
+
+#menu {	
+padding:0;	
+font-weight : bold; 
+font-family : Arial; 
+font-size : 12px; 
+margin-left:2%;
+margin-top: -12px;
+}
+
+#menu li a {
+background:url(images/onglet.png);
+display:block;
+padding : 0;
+color : white; 
+text-decoration : none; 
+text-align : center;
+width:120px;
+height:30px;
+}
+
+#menu li a .onglet{
+padding-top:7px;
+}
+
+#menu li{
+float: left;
+margin-left:10px;
+}
+
+#menu a:hover{
+background: url(images/onglet_hover.png);
+color: white;
+transition: .4s;
+}
+
+#menu a:not(:hover){
+	transition: .4s;
+}
+
+.ImagePrec {
+	width: 40px;
+	margin-left:0px;
+	position: relative;
+	display: inline-block;
+	border:none;
+}
+
+.ImagePrec .top{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.ImagePrec:hover .top{
+	transition: .4s;
+	display: inline;
+}
+
+.ImageSuiv{
+margin-right:0px;
+width:40px; 
+border:none;
+}
+
+a.stylebutton {
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  border: solid thin #929292;
+  text-shadow: none;
+  background: #F6F6F6;
+  background-image: -webkit-linear-gradient(top, #F6F6F6, #DDDDDD);
+  background-image: -moz-linear-gradient(top, #F6F6F6, #DDDDDD);
+  background-image: -ms-linear-gradient(top, #F6F6F6, #DDDDDD);
+  background-image: -o-linear-gradient(top, #F6F6F6, #DDDDDD);
+  background-image: linear-gradient(to bottom, #F6F6F6, #DDDDDD);    
+  color: buttontext;
+  padding: 3px 8px;
+  margin: 2px;
+  text-decoration: none;
+  font-family: Arial;
+  font-size: 13.1999998092651px;
+}
+
+a.stylebutton:hover {
+  background-image: -webkit-linear-gradient(top, #DDDDDD, #F6F6F6);
+  background-image: -moz-linear-gradient(top, #DDDDDD, #F6F6F6);
+  background-image: -ms-linear-gradient(top, #DDDDDD, #F6F6F6);
+  background-image: -o-linear-gradient(top, #DDDDDD, #F6F6F6, #DDDDDD);
+  background-image: linear-gradient(to bottom, #DDDDDD, #F6F6F6);    
+}

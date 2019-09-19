@@ -1,0 +1,51 @@
+﻿to close;fermer;True
+cluster;groupe, grappe;False
+company, firm;entreprise, société;True
+compiler;compilateur;True
+to complete;terminer;False
+complete;fini, achevé;False
+compliant;conforme, compatible, accommodant;True
+component;composant;True
+computer;ordinateur, calculateur;True
+computer-assisted design, CAD;conception assistée par ordinateur, CAO;False
+computer science;informatique;True
+condenser;condensateur;False
+conducting;à l'état passant;False
+to configure;configurer;True
+to connect;brancher;True
+connection;une connexion;True
+connection diagram;schéma de câblage;False
+consumer electronics;électronique grand public;False
+consumption;consommation;True
+consumer;consommateur;True
+contents;contenu;True
+control;commande, contrôle;False
+control mode;mode de fonctionnement;False
+conversational;conversationnel;False
+to cool;refroidir;False
+copper;cuivre;False
+core;noyau, âme, centre;True
+to count;compter;True
+counter;compteur;True
+to cover;couvrir, recouvrir;False
+to crash;tomber en panne, "planter";True
+current;le courant;True
+current;actuel, en cours;True
+customer;client;True
+cut and paste;couper-coller;False
+cutoff;coupure;False
+to damage;endommager;True
+data;données;True
+data capture;saisie de données (en masse);False
+data carrier;support de données;False
+data entry;saisie de données;True
+data link;chaîne/liaison de données, transmission;False
+data network;réseau de données;False
+data sheet;feuille de spécifications;True
+data sink;collecteur de données;False
+data transfer rate;cadence de transfert (de données);False
+datagram;datagramme;False
+deadline;date limite;True
+deadlock;un blocage, une impasse, étreinte fatale;False
+to debug;mettre au point, corriger les erreurs;True
+to decrease;diminuer;True

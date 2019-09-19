@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Glossaire d'anglais</title>
+		<link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" media="screen" type="text/css" />
+		<script type="text/javascript">
+        	function play(link){
+            	var x = new Audio(link);
+           	 x.play();
+        	}
+      </script>
+	</head>
+	<body>	
+		<div id="header">
+			<br/><h1>Glossaire technique d'anglais</h1>
+			{% if type == "page" %}
+				<h2>Résultats du contrôle sur la page {{ page }} ({{ nbmot }} mots)</h2>
+			{% else %}
+				<h2>Résultats du contrôle ({{ nbmot }} mots)</h2>
+			{% endif %}
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="/accueil/1"><div class="onglet">Accueil</div></a></li>
+				<li><a href="/test"><div class="onglet">Se tester</div></a></li>
+				<li><a href="/recherche"><div class="onglet">Rechercher</div></a></li>
+			</ul>
+		</div>
+		<div id="content">
+			<center>
+				<form id="Control">
+					<div class="header">
+						<b>Résultat du test :</b>
+					</div>
+					<div class="content">
+						<br>
+						<table class="result" width="100%">
+							{% for i in range(fr|length) %}
+							{% if user[i] == en[i] %}
+							<tr style="color: #50ff50">
+							{% else %}
+							<tr style="color: #ff5050">
+							{% endif %}
+								<td width="43%" align="right"><span onClick='play("https://www.google.com/speech-api/v1/synthesize?text={{fr[i]}}&enc=mpeg&lang=fr-fr&speed=0.5&client=lr-language-tts&use_google_only_voices=1")'>{{ fr[i] }}</span></td>
+								<td width="14%" align="center"><input value="{{ user[i] }}" disabled></td>
+								<td width="43%" align="left"><span onClick='play("https://www.google.com/speech-api/v1/synthesize?text={{en[i]}}&enc=mpeg&lang=en-gb&speed=0.4&client=lr-language-tts&use_google_only_voices=1")'>{{ en[i] }}</span></td>
+							</tr>
+							{%endfor%}
+						</table>
+						<br>
+						<a class="stylebutton" href="/test">Recommencer</a>
+						<br><br>
+					</div>
+				</form>
+			</center>
+		</div>
+	</body>
+</html>

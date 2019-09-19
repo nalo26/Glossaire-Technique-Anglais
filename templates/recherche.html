@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Glossaire d'anglais</title>
+		<link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" media="screen" type="text/css" />*
+		<script type="text/javascript">
+        	function play(link){
+            	var x = new Audio(link);
+            	x.play();
+         	}
+      </script>
+	</head>
+	<body>
+		<div id="header">
+			<br/><h1>Glossaire technique d'anglais</h1>         
+			<h2>Rechercher un mot</h2>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="/accueil/1"><div class="onglet">Accueil</div></a></li>
+				<li><a href="/test"><div class="onglet">Se tester</div></a></li>
+				<li><a href="/recherche"><div class="onglet">Rechercher</div></a></li>
+			</ul>
+		</div>
+		<div id="content">
+			<center>
+				<form name="recherche" id="rech" action="" method="POST" width="60%">
+					<div class="content">
+						<br>Mot recherché :
+						<input name="text">
+						<br/><br/>
+						<input type="submit" value="Rechercher">
+						<br><br/>
+					</div>
+				</form>
+			</center>
+			<br><br>
+			{% if result != 0 %} <!-- no request -->
+				<table class="gl">
+					<col width="50%">
+               		<col width="50%">
+					{% if result != -1%} <!-- results -->
+			            <thead>
+			            	<tr>
+			            		<th colspan="2">Résultats contenants "{{word}}"</th>
+			         		</tr>
+			                <tr>
+			                	<th>Anglais</th>
+			                	<th>Français</th>
+			                </tr>
+			            </thead>
+			            <tbody>
+			            	{% for i in range(lenght) %}
+			                  {% if i is divisibleby(2) %}
+			                     <tr class="pair">
+			                        {% if "True" in listed[lenght*2+i] %}
+			                           <td style="color:#ff5050;"><span onClick='play("https://www.google.com/speech-api/v1/synthesize?text={{listed[i]}}&enc=mpeg&lang=en-gb&speed=0.4&client=lr-language-tts&use_google_only_voices=1")'><b>{{ listed[i] }}</b></span></td>
+			                           <td style="color:#ff5050;"><span onClick='play("https://www.google.com/speech-api/v1/synthesize?text={{listed[lenght+i]}}&enc=mpeg&lang=fr-fr&speed=0.5&client=lr-language-tts&use_google_only_voices=1")'><b>{{ listed[lenght+i] }}</b></span></td>
+			                        {% else %}
+			                           <td><span onClick='play("https://www.google.com/speech-api/v1/synthesize?text={{listed[i]}}&enc=mpeg&lang=en-gb&speed=0.4&client=lr-language-tts&use_google_only_voices=1")'>{{ listed[i] }}</span></td>
+			                           <td><span onClick='play("https://www.google.com/speech-api/v1/synthesize?text={{listed[lenght+i]}}&enc=mpeg&lang=fr-fr&speed=0.5&client=lr-language-tts&use_google_only_voices=1")'>{{ listed[lenght+i] }}</span></td>
+			                        {% endif %}
+			                     </tr>
+			                  {% else %}
+			                     <tr class="impair">
+			                        {% if "True" in listed[lenght*2+i] %}
+			                           <td style="color:#ff5050;"><span onClick='play("https://www.google.com/speech-api/v1/synthesize?text={{listed[i]}}&enc=mpeg&lang=en-gb&speed=0.4&client=lr-language-tts&use_google_only_voices=1")'><b>{{ listed[i] }}</b></span></td>
+			                           <td style="color:#ff5050;"><span onClick='play("https://www.google.com/speech-api/v1/synthesize?text={{listed[lenght+i]}}&enc=mpeg&lang=fr-fr&speed=0.5&client=lr-language-tts&use_google_only_voices=1")'><b>{{ listed[lenght+i] }}</b></span></td>
+			                        {% else %}
+			                           <td><span onClick='play("https://www.google.com/speech-api/v1/synthesize?text={{listed[i]}}&enc=mpeg&lang=en-gb&speed=0.4&client=lr-language-tts&use_google_only_voices=1")'>{{ listed[i] }}</span></td>
+			                           <td><span onClick='play("https://www.google.com/speech-api/v1/synthesize?text={{listed[lenght+i]}}&enc=mpeg&lang=fr-fr&speed=0.5&client=lr-language-tts&use_google_only_voices=1")'>{{ listed[lenght+i] }}</span></td>
+			                        {% endif %}
+			                     </tr>
+			                  {% endif %}
+			               {% endfor %}
+			                <tr>
+                  				<td style="border-color:#999;border-left-width:0px;border-right-width:0px;border-top-width:1px;border-bottom-width:0px;"></td>
+                  				<td style="border-color:#999;border-left-width:0px;border-right-width:0px;border-top-width:1px;border-bottom-width:0px;"></td>
+               				</tr>
+			            </tbody>
+					{% else %} <!-- no result -->
+						<thead>
+							<tr><th colspan="2">Résultats contenants "{{word}}"</th></tr>
+							<tr><th colspan="2">   </th></tr>
+							<tr><th colspan="2">Aucun résultat :c</th></tr>
+						</thead>
+					{% endif %}
+				</table>
+			{% endif %}
+		</div>
+	</body>
+	</body>
+</html>
