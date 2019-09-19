@@ -4,7 +4,7 @@ from forms import TestType
 import random
 app=Flask(__name__)
 
-app.config['SECRET_KEY'] = '1b56d60b2cec942c6b4ed6d90fdd4b81'
+app.config['SECRET_KEY'] = 'yowhatsup'
 
 @app.route('/')
 @app.route('/accueil')
